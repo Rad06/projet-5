@@ -39,6 +39,8 @@ arrow_left.addEventListener("click", () => {
 
 	if (index > 0) {  ///si l'index n'a pas atteint 0
 		index-- //baisse l'index
+	} else {
+		index = slides.length -1  // Boucle tout à droite
 	}
 	update() //mettre à jour les éléments de la page
 
@@ -49,6 +51,8 @@ arrow_right.addEventListener("click", () => {
 	console.log("j'ai cliqué sur arrow_right")
 	if (index < slides.length - 1) { //si l'index n'a pas atteint le max 
 		index++ //augmente l'index
+	} else {
+		index = 0
 	}
 	update() // mettre à jour les éléments de la page
 })
